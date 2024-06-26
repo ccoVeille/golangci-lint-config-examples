@@ -1,0 +1,22 @@
+{
+  "Version": "3.0.1",
+  "Verbose": false,
+  "Format": "",
+  "Debug": false,
+  "IgnoreDefaults": false,
+  "SpacesAftertabs": false,
+  "NoColor": false,
+  "Exclude": [
+  	".vale/styles/RedHat"
+  ],
+  "AllowedContentTypes": [],
+  "PassedFiles": [],
+  "Disable": {
+    "EndOfLine": false,
+    "Indentation": false,
+    "InsertFinalNewline": false,
+    "TrimTrailingWhitespace": false,
+    "IndentSize": false,
+    "MaxLineLength": false
+  }
+}

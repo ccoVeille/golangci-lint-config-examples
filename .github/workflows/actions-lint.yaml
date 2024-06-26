@@ -1,0 +1,11 @@
+---
+on: push
+
+jobs:
+  action-lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout-action
+        uses: actions/checkout@v4.1.7
+      - name: actionlint
+        uses: raven-actions/actionlint@v1.0.3
