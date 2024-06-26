@@ -1,4 +1,5 @@
 ---
 # empty file to force using the default settings
-# otherwise golangci-lint looks for .golangci.yaml files in folders above current one
+# otherwise golangci-lint looks for .golangci.yaml files
+# in parent folders
 # this may cause issues
