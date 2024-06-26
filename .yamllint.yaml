@@ -1,0 +1,11 @@
+---
+extends: default
+
+# These files are imported by vale from an external repository
+ignore: |
+  .vale/styles/RedHat/
+rules:
+  truthy:
+    # the node "on:" present in each GitHub Actions workflow file
+    ignore: |
+      .github/

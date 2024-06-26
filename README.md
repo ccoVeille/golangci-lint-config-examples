@@ -1,2 +1,3 @@
-# golangci-lint-config-examples
-These are .golangci.yml to go based on your need
+# Configuration examples for golangci-lint
+
+These are `.golangci.yaml` examples to use in your projects
