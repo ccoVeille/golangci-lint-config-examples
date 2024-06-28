@@ -4,6 +4,13 @@ These are the currently available linter that are enabled in the current last `g
 
 See [.golangci.yaml](.golangci.yaml)
 
+## License
+
+License: MIT
+
+golangci-lint configuration file made by @ccoVeille
+Source: https://github.com/ccoVeille/golangci-lint-config-examples/tree/main/01-defaults
+
 ## Enabled linters
 
 ### errcheck

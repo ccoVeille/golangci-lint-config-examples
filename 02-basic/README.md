@@ -1,9 +1,16 @@
-# Safe Settings
+# Basic Settings
 
 See [.golangci.yaml](.golangci.yaml)
 
 It's [01-defaults](../01-defaults) plus :
 - [revive](#revive)
+
+## License
+
+License: MIT
+
+golangci-lint configuration file made by @ccoVeille
+Source: https://github.com/ccoVeille/golangci-lint-config-examples/tree/main/02-basics
 
 ## Enabled linters
 
