@@ -1,0 +1,18 @@
+---
+linters:
+  # These linters are enabled by default
+  # They can be disable by moving them to the 'disable' key
+  enable:
+    # Errcheck is a program for checking for unchecked errors in Go code.
+    - errcheck: null
+    # Linter for Go source code that specializes in simplifying code.
+    - gosimple
+    # Vet examines Go source code and reports suspicious constructs.
+    - govet
+    # Detects when assignments to existing variables are not used.
+    - ineffassign
+    # It's a set of rules from staticcheck. See https://staticcheck.io/
+    - staticcheck
+  disable:
+  # empty by default
+  # but you can any linter here, even the default ones
