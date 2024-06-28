@@ -9,3 +9,8 @@ rules:
     # the node "on:" present in each GitHub Actions workflow file
     ignore: |
       .github/
+
+  line-length:
+    max: 200
+    allow-non-breakable-words: true
+    allow-non-breakable-inline-mappings: false
