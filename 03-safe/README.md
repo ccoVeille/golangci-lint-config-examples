@@ -1,14 +1,21 @@
-# Safer Settings
+# Safe Settings
 
 See [.golangci.yaml](.golangci.yaml)
 
-It's [02-basics](../02-basics) plus :
+It's [02-basic](../02-basic) plus :
 - [gci](#gci)
 - [thelper](#thelper)
 - [mirror](#mirror)
 - [usestdlibvars](#usestdlibvars)
 - [dupwords](#dupwords)
 - [misspell](#misspell)
+
+## License
+
+License: MIT
+
+golangci-lint configuration file made by @ccoVeille
+Source: https://github.com/ccoVeille/golangci-lint-config-examples/tree/main/03-safe
 
 ## Enabled linters
 
