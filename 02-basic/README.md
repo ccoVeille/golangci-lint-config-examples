@@ -96,9 +96,3 @@ report when a variable declaration can be simplified
 #### var-naming
 warns when initialism, variable or package naming conventions are not followed.
 
-
-## Changelog
-
-- 2024-06-28 - golangci-lint:1.59.1
-
-  initial version
