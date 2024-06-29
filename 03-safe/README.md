@@ -1,6 +1,6 @@
 # Safe Settings
 
-See [.golangci.yaml](.golangci.yaml)
+See [.golangci.yml](.golangci.yml)
 
 It's [02-basic](../02-basic) plus :
 - [gci](#gci)
