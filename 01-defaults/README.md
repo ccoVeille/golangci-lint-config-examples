@@ -27,9 +27,4 @@ Source: [@ccoVeille](https://github.com/ccoVeille/golangci-lint-config-examples)
 ### staticcheck
  It's a set of rules from staticcheck. See https://staticcheck.io/
 
-## Changelog
-
-- 2024-06-28 - golangci-lint:1.59.1
-
-  initial version
 
