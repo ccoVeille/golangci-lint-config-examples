@@ -1,6 +1,6 @@
 # Basic Settings
 
-See [.golangci.yaml](.golangci.yaml)
+See [.golangci.yml](.golangci.yml)
 
 It's [01-defaults](../01-defaults) plus :
 - [revive](#revive)

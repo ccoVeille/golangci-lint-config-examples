@@ -2,7 +2,7 @@
 
 These are the currently available linter that are enabled in the current last `golangci-lint` version available today (1.59.1)
 
-See [.golangci.yaml](.golangci.yaml)
+See [.golangci.yml](.golangci.yml)
 
 ## License
 
