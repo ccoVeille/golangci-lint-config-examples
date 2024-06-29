@@ -1,7 +1,10 @@
 ---
 # golangci-lint configuration file made by @ccoVeille
-# Source: https://github.com/ccoVeille/golangci-lint-config-examples/tree/main/01-defaults
+# Source: https://github.com/ccoVeille/golangci-lint-config-examples/
+# Author: @ccoVeille
 # License: MIT
+# Variant: 01-defaults
+# Version: v1.0.0
 #
 linters:
   # some linters are enabled by default

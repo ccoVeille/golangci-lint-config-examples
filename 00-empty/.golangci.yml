@@ -1,7 +1,10 @@
 ---
 # golangci-lint configuration file made by @ccoVeille
-# Source: https://github.com/ccoVeille/golangci-lint-config-examples/tree/main/00-empty
+# Source: https://github.com/ccoVeille/golangci-lint-config-examples/
+# Author: @ccoVeille
 # License: MIT
+# Variant: 01-defaults
+# Version: v1.0.0
 #
 # empty file to force using the default settings
 # otherwise golangci-lint looks for .golangci.yaml files

@@ -14,8 +14,7 @@ It's [02-basic](../02-basic) plus :
 
 License: MIT
 
-golangci-lint configuration file made by @ccoVeille
-Source: https://github.com/ccoVeille/golangci-lint-config-examples/tree/main/03-safe
+Source: [@ccoVeille](https://github.com/ccoVeille/golangci-lint-config-examples)
 
 ## Enabled linters
 
