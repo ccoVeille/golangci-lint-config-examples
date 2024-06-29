@@ -17,11 +17,6 @@ Each variant adds rules to the earlier one.
 
 License: MIT
 
-golangci-lint configuration file made by @ccoVeille
-Source: https://github.com/ccoVeille/golangci-lint-config-examples
+Author: [@ccoVeille](https://github.com/ccoVeille)
 
-## Changelog
-
-- 2024-06-28 - golangci-lint:1.59.1
-
-  initial version
+Source: [ccoVeille/golangci-lint-config-examples](https://github.com/ccoVeille/golangci-lint-config-examples)

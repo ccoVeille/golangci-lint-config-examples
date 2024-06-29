@@ -10,5 +10,5 @@ See [.golangci.yml](.golangci.yml)
 
 License: MIT
 
-golangci-lint configuration file made by @ccoVeille
-Source: https://github.com/ccoVeille/golangci-lint-config-examples/tree/main/00-empty
+Source: [@ccoVeille](https://github.com/ccoVeille/golangci-lint-config-examples)
+
