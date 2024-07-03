@@ -1,7 +1,7 @@
 ---
 name: CI
 on:
-  push:
+  pull_request:
 jobs:
   ci-lint:
     runs-on: ubuntu-latest
@@ -12,20 +12,24 @@ jobs:
       - name: checkout-action
         uses: actions/checkout@v4.1.7
 
-      - name: yamllint-action
+      - name: yamllint
         uses: ibiqlik/action-yamllint@v3
+        #  uses: reviewdog/action-yamllint@v1  # failed to detect errors...
 
       - name: vale-action
         uses: errata-ai/vale-action@v2.1.0
 
       - name: typos-action
-        uses: crate-ci/typos@v1.21.0
+        #  uses: crate-ci/typos@v1.21.0
+        uses: Shemnei/reviewdog-action-typos@v0
 
       - name: Codespell with annotations
-        uses: codespell-project/actions-codespell@v2.0
+        #  uses: codespell-project/actions-codespell@v2.0
+        uses: plettich/action-codespell@master
 
       - name: markdownlint-cli2-action
-        uses: DavidAnson/markdownlint-cli2-action@v16.0.0
+        #  uses: DavidAnson/markdownlint-cli2-action@v16.0.0
+        uses: reviewdog/action-markdownlint@v0
 
       - name: editorconfig-checker-action
         uses: editorconfig-checker/action-editorconfig-checker@v2
