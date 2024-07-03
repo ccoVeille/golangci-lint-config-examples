@@ -1,4 +1,5 @@
 ---
+name: github-actions-lint
 on: push
 
 jobs:
