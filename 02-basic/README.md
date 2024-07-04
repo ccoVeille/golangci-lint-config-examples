@@ -37,7 +37,7 @@ Source: https://github.com/ccoVeille/golangci-lint-config-examples/tree/main/02-
 Blank import should be only in a main or test package, or have a comment justifying it.
 
 #### context-as-argument
-context.Context() should be the first parameter of a function when provided as argument.
+`context.Context()` should be the first parameter of a function when provided as argument.
 
 #### context-keys-type
 Basic types should not be used as a key in `context.WithValue`

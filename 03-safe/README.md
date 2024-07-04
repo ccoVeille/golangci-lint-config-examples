@@ -37,7 +37,7 @@ Source: [@ccoVeille](https://github.com/ccoVeille/golangci-lint-config-examples)
  check imports order and makes it always deterministic.
 
 ### thelper
- make sure to use t.Helper() when needed
+ make sure to use `t.Helper()` when needed
 
 ### mirror
  mirror suggests rewrites to avoid unnecessary []byte/string conversion
@@ -59,7 +59,7 @@ Checks for duplicate words in the source code.
 Blank import should be only in a main or test package, or have a comment justifying it.
 
 #### context-as-argument
-context.Context() should be the first parameter of a function when provided as argument.
+`context.Context()` should be the first parameter of a function when provided as argument.
 
 #### context-keys-type
 Basic types should not be used as a key in `context.WithValue`
