@@ -9,4 +9,4 @@ jobs:
       - name: checkout-action
         uses: actions/checkout@v4.1.7
       - name: actionlint
-        uses: raven-actions/actionlint@v1.0.3
+        uses: raven-actions/actionlint@v2.0.0
