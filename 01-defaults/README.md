@@ -1,6 +1,6 @@
 # Default settings
 
-These are the currently available linter that are enabled in the current last `golangci-lint` version available today (1.59.1)
+These are the currently available linter that are enabled in the current last `golangci-lint` version available today (1.60.3)
 
 See [.golangci.yml](.golangci.yml)
 
