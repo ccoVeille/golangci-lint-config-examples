@@ -10,14 +10,14 @@ jobs:
       fail-fast: false
     steps:
       - name: checkout-action
-        uses: actions/checkout@v4.2.1
+        uses: actions/checkout@v4.2.2
 
       - name: yamllint
         uses: ibiqlik/action-yamllint@v3
         #  uses: reviewdog/action-yamllint@v1  # failed to detect errors...
 
       - name: vale-action
-        uses: errata-ai/vale-action@v2.1.0
+        uses: errata-ai/vale-action@v2.1.1
 
       - name: typos-action
         #  uses: crate-ci/typos@v1.21.0
