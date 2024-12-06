@@ -4,7 +4,7 @@
 # Author: @ccoVeille
 # License: MIT
 # Variant: 03-safe
-# Version: v1.0.2
+# Version: v1.1.0
 #
 linters:
   # some linters are enabled by default
@@ -48,6 +48,12 @@ linters:
 
     # Checks for duplicate words in the source code.
     - dupword
+
+    # linter to detect errors invalid key values count
+    - loggercheck
+
+    # detects nested contexts in loops or function literals
+    - fatcontext
 
 linters-settings:
   gci:  # define the section orders for imports
