@@ -1,6 +1,6 @@
 # Configuration examples for golangci-lint
 
-These are `.golangci.yaml` examples to use in your projects
+These are `.golangci.yml` examples to use in your projects
 
 ## Variants
 
@@ -8,10 +8,13 @@ These are `.golangci.yaml` examples to use in your projects
 - [01-defaults](./01-defaults)
 - [02-basic](./02-basic)
 - [03-safe](./03-safe)
+...
+- [80-reckless](./80-reckless)
+- [90-daredevil](./90-daredevil)
 
 The bigger the number is the more rules it has.
 
-Each variant adds rules to the earlier one.
+Each variant adds rules to the previous one.
 
 ## License
 

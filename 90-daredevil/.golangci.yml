@@ -1,0 +1,217 @@
+---
+# golangci-lint configuration file made by @ccoVeille
+# Source: https://github.com/ccoVeille/golangci-lint-config-examples/
+# Author: @ccoVeille
+# License: MIT
+# Variant: 90-daredevil
+# Version: v1.1.0
+#
+
+run:
+  # Timeout for analysis, e.g. 30s, 5m.
+  # Default: 1m
+  timeout: 5m
+
+issues:
+  exclude-use-default: false
+
+  # The list of ids of default excludes to include or disable.
+  # https://golangci-lint.run/usage/false-positives/#default-exclusions
+  # Default: []
+  include:
+    - EXC0001
+    - EXC0002
+    - EXC0003
+    - EXC0004
+    - EXC0005
+    - EXC0006
+    - EXC0007
+    - EXC0008
+    - EXC0009
+    - EXC0010
+    - EXC0011
+    - EXC0012
+    - EXC0013
+    - EXC0014
+    - EXC0015
+
+  # Maximum issues count per one linter.
+  # Set to 0 to disable.
+  # Default: 50
+  max-issues-per-linter: 0
+  # Maximum count of issues with the same text.
+  # Set to 0 to disable.
+  # Default: 3
+  max-same-issues: 0
+
+linters:
+  # some linters are enabled by default
+  # https://golangci-lint.run/usage/linters/
+  #
+  # enable some extra linters
+  enable-all: true
+
+linters-settings:
+  gci:  # define the section orders for imports
+    sections:
+      # Standard section: captures all standard packages.
+      - standard
+      # Default section: catchall that is not standard or custom
+      - default
+      # linters that related to local tool, so they should be separated
+      - localmodule
+
+  usestdlibvars:
+    # Suggest the use of http.MethodXX.
+    # Default: true
+    http-method: true
+    # Suggest the use of http.StatusXX.
+    # Default: true
+    http-status-code: true
+    # Suggest the use of time.Weekday.String().
+    # Default: true
+    time-weekday: true
+    # Suggest the use of constants available in time package
+    # Default: false
+    time-layout: true
+
+  staticcheck:
+    # SAxxxx checks in https://staticcheck.io/docs/configuration/options/#checks
+    checks: ["all"]
+
+  nolintlint:
+    # Enable to require an explanation of nonzero length
+    # after each nolint directive.
+    # Default: false
+    require-explanation: true
+    # Enable to require nolint directives to mention the specific
+    # linter being suppressed.
+    # Default: false
+    require-specific: true
+
+  govet:
+    enable-all: true
+
+  gocritic:
+    enable-all: true
+
+  revive:
+    enable-all-rules: true
+    rules:
+      # we must provide configuration for linter that requires them
+      # enable-all-rules is OK, but many revive linters expect configuration
+      # and cannot work without them
+
+      # https://github.com/mgechev/revive/blob/master/RULES_DESCRIPTIONS.md#add-constant
+      - name: add-constant
+        arguments:
+          - maxLitCount: "3"
+            allowStrs: '""'
+            allowInts: "0,1,2"
+            allowFloats: "0.0,0.,1.0,1.,2.0,2."
+
+      # https://github.com/mgechev/revive/blob/master/RULES_DESCRIPTIONS.md#cognitive-complexity
+      - name: cognitive-complexity
+        severity: warning
+        arguments: [7]
+
+      # https://github.com/mgechev/revive/blob/master/RULES_DESCRIPTIONS.md#context-as-argument
+      - name: context-as-argument
+        arguments:
+          - allowTypesBefore: "*testing.T"
+
+      # https://github.com/mgechev/revive/blob/master/RULES_DESCRIPTIONS.md#cyclomatic
+      - name: cyclomatic
+        arguments: [3]
+
+      # https://github.com/mgechev/revive/blob/master/RULES_DESCRIPTIONS.md#exported
+      - name: exported
+        arguments:
+          # enables checking public methods of private types
+          - "checkPrivateReceivers"
+          # make error messages clearer
+          - "sayRepetitiveInsteadOfStutters"
+
+      # this linter completes errcheck linter, it will report method called without handling the error
+      # https://github.com/mgechev/revive/blob/master/RULES_DESCRIPTIONS.md#unhandled-error
+      - name: unhandled-error
+        arguments: # here are the exceptions we don't want to be reported
+          - "fmt.Print.*"
+          - "fmt.Fprint.*"
+          - "bytes.Buffer.Write"
+          - "bytes.Buffer.WriteByte"
+          - "bytes.Buffer.WriteString"
+          - "strings.Builder.WriteString"
+          - "strings.Builder.WriteRune"
+
+      # disable everything we don't want
+      - name: line-length-limit
+        disabled: true
+      - name: argument-limit
+        disabled: true
+      - name: banned-characters
+        disabled: true
+      - name: max-public-structs
+        disabled: true
+      - name: function-result-limit
+        disabled: true
+      - name: function-length
+        disabled: true
+      - name: file-header
+        disabled: true
+      - name: empty-lines
+        disabled: true
+
+  dupword:
+    # Keywords used to ignore detection.
+    # Default: []
+    ignore:
+    #  - "blah" # this will accept "blah blah …" as a valid duplicate word
+
+  misspell:
+    # Correct spellings using locale preferences for US or UK.
+    # Setting locale to US will correct the British spelling of 'colour' to 'color'.
+    # Default ("") is to use a neutral variety of English.
+    locale: US
+
+    # List of words to ignore
+    # among the one defined in https://github.com/golangci/misspell/blob/master/words.go
+    ignore-words:
+    #  - valor
+    #  - and
+
+    # Extra word corrections.
+    extra-words:
+    #  - typo: "whattever"
+    #    correction: "whatever"
+
+output:
+  # Make issues output unique by line.
+  # Default: true
+  uniq-by-line: false
+
+  # Sort results by the order defined in `sort-order`.
+  # Default: false
+  sort-results: true
+
+  # Order to use when sorting results.
+  # Require `sort-results` to `true`.
+  # Possible values: `file`, `linter`, and `severity`.
+  #
+  # If the severity values are inside the following list, they are ordered in this order:
+  #   1. error
+  #   2. warning
+  #   3. high
+  #   4. medium
+  #   5. low
+  # Either they are sorted alphabetically.
+  #
+  # Default: ["file"]
+  sort-order:
+    - linter
+    - severity
+    - file # filepath, line, and column.
+
+  # Show statistics per linter.
+  # Default: false
+  show-stats: true
