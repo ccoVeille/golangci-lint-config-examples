@@ -9,6 +9,8 @@ It's [02-basic](../02-basic) plus :
 - [usestdlibvars](#usestdlibvars)
 - [dupwords](#dupwords)
 - [misspell](#misspell)
+- [fatcontext](#fatcontext)
+- [loggercheck](#loggercheck)
 
 ## License
 
@@ -50,6 +52,12 @@ Finds commonly misspelled English words.
 
 ### dupword
 Checks for duplicate words in the source code.
+
+### loggercheck
+Detects errors invalid key values count
+
+### fatcontext
+Detects nested contexts in loops or function literals
 
 ### revive
  Fast, configurable, extensible, flexible, and beautiful linter for Go.

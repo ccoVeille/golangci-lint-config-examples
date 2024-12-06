@@ -4,7 +4,7 @@
 # Author: @ccoVeille
 # License: MIT
 # Variant: 01-defaults
-# Version: v1.0.2
+# Version: v1.1.0
 #
 # empty file to force using the default settings
 # otherwise golangci-lint looks for .golangci.yaml files
