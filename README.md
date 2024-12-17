@@ -1,5 +1,7 @@
 # Configuration examples for golangci-lint
 
+[![Number of project quoting this repository](https://img.shields.io/github/search?query=%22ccoveille%2Fgolangci-lint-config-examples%22%20-is%3Afork%20-is%3Aarchived%20-org%3AccoVeille&label=projects%20using%20this&logo=github)](https://github.com/search?q=%22ccoveille%2Fgolangci-lint-config-examples%22+-is%3Afork+-is%3Aarchived+-org%3AccoVeille&type=code)
+
 These are `.golangci.yml` examples to use in your projects
 
 ## Variants
