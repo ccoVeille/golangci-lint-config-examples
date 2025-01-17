@@ -10,6 +10,7 @@ These are `.golangci.yml` examples to use in your projects
 - [01-defaults](./01-defaults)
 - [02-basic](./02-basic)
 - [03-safe](./03-safe)
+- [10-cautious](./10-cautious)
 ...
 - [80-reckless](./80-reckless)
 - [90-daredevil](./90-daredevil)
