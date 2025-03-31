@@ -1,0 +1,60 @@
+---
+name: Files Lint
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read  # for actions/checkout to fetch code
+
+jobs:
+  yamllint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout-action
+        uses: actions/checkout@v4.2.2
+
+      - name: yamllint
+        uses: ibiqlik/action-yamllint@v3
+
+  typos-cli:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout-action
+        uses: actions/checkout@v4.2.2
+
+      - name: typos-action
+        uses: crate-ci/typos@v1.31.1
+
+  markdownlint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout-action
+        uses: actions/checkout@v4.2.2
+
+      - name: markdownlint-cli2-action
+        uses: DavidAnson/markdownlint-cli2-action@v19.1.0
+
+  editorconfig-checker:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout-action
+        uses: actions/checkout@v4.2.2
+
+      - name: editorconfig-checker-action
+        uses: editorconfig-checker/action-editorconfig-checker@v2
+
+  vale:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout-action
+        uses: actions/checkout@v4
+
+      # mitigate some issues with the vale-action
+      - name: Install Asciidoctor
+        run: sudo apt-get install -y asciidoctor
+
+      - name: vale-action
+        uses: errata-ai/vale-action@v2
