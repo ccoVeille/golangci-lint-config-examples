@@ -4,19 +4,17 @@
 # Author: @ccoVeille
 # License: MIT
 # Variant: 01-defaults
-# Version: v1.1.0
+# Version: v2.0.0
 #
+version: "2"
+
 linters:
   # some linters are enabled by default
   # https://golangci-lint.run/usage/linters/
   #
-  # enable some extra linters
   enable:
     # Errcheck is a program for checking for unchecked errors in Go code.
     - errcheck
-
-    # Linter for Go source code that specializes in simplifying code.
-    - gosimple
 
     # Vet examines Go source code and reports suspicious constructs.
     - govet
@@ -26,3 +24,6 @@ linters:
 
     # It's a set of rules from staticcheck. See https://staticcheck.io/
     - staticcheck
+
+    # Checks Go code for unused constants, variables, functions and types.
+    - unused
