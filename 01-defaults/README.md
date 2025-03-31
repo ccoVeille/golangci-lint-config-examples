@@ -12,11 +12,10 @@ Source: [@ccoVeille](https://github.com/ccoVeille/golangci-lint-config-examples)
 
 ## Enabled linters
 
+These are the default ones:
+
 ### errcheck
  Errcheck is a program for checking for unchecked errors in Go code.
-
-### gosimple
- Linter for Go source code that specializes in simplifying code.
 
 ### govet
  Vet examines Go source code and reports suspicious constructs.
@@ -27,4 +26,5 @@ Source: [@ccoVeille](https://github.com/ccoVeille/golangci-lint-config-examples)
 ### staticcheck
  It's a set of rules from staticcheck. See https://staticcheck.io/
 
-
+### unused
+ Checks Go code for unused constants, variables, functions, and types.

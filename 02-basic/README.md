@@ -3,6 +3,7 @@
 See [.golangci.yml](.golangci.yml)
 
 It's [01-defaults](../01-defaults) plus :
+- [gofmt](#gofmt)
 - [revive](#revive)
 
 ## License
@@ -11,6 +12,10 @@ License: MIT
 
 golangci-lint configuration file made by @ccoVeille
 Source: https://github.com/ccoVeille/golangci-lint-config-examples/tree/main/02-basics
+
+## Enabled formatters
+### gofmt
+ format the code with Go standard library
 
 ## Enabled linters
 
@@ -32,6 +37,8 @@ Source: https://github.com/ccoVeille/golangci-lint-config-examples/tree/main/02-
 ### revive
  Fast, configurable, extensible, flexible, and beautiful linter for Go.
  Drop-in replacement of golint.
+
+These are the default ones available in revive
 
 #### blank-imports
 Blank import should be only in a main or test package, or have a comment justifying it.
@@ -59,6 +66,9 @@ for better readability, error messages should not be capitalized or end with pun
 
 #### errorf
 report when replacing `errors.New(fmt.Sprintf())` with `fmt.Errorf()` is possible
+
+#### exported
+check naming and commenting conventions on exported symbols.
 
 #### increment-decrement
 incrementing an integer variable by 1 is recommended to be done using the `++` operator

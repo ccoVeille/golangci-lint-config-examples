@@ -18,6 +18,13 @@ License: MIT
 
 Source: [@ccoVeille](https://github.com/ccoVeille/golangci-lint-config-examples)
 
+## Enabled formatters
+### gofmt
+ format the code with Go standard library
+
+### gci
+ make sure imports are always in a deterministic order
+
 ## Enabled linters
 
 ### errcheck
@@ -34,9 +41,6 @@ Source: [@ccoVeille](https://github.com/ccoVeille/golangci-lint-config-examples)
 
 ### staticcheck
  It's a set of rules from staticcheck. See https://staticcheck.io/
-
-### gci
- check imports order and makes it always deterministic.
 
 ### thelper
  make sure to use `t.Helper()` when needed
