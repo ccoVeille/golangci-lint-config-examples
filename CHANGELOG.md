@@ -1,7 +1,12 @@
 # Changelog
 
-<!-- markdownlint-disable MD022 MD032 -->
-<!-- markdownlint-enable siblings_only -->
+<!-- markdownlint-configure-file {
+  "blanks-around-headings": false,
+  "blanks-around-lists": false,
+  "no-duplicate-heading": {
+    "siblings_only": true
+  }
+} -->
 
 All notable changes to this project will be documented in this file.
 

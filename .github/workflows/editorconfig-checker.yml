@@ -1,0 +1,13 @@
+---
+name: CI
+on:
+  pull_request:
+jobs:
+  editorconfig-checker:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout-action
+        uses: actions/checkout@v4
+
+      - name: editorconfig-checker-action
+        uses: editorconfig-checker/action-editorconfig-checker@v2
