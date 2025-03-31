@@ -11,6 +11,8 @@ It's [02-basic](../02-basic) plus :
 - [misspell](#misspell)
 - [fatcontext](#fatcontext)
 - [loggercheck](#loggercheck)
+- [exptostd](#exptostd)
+- [usetesting](#usetesting)
 
 ## License
 
@@ -30,9 +32,6 @@ Source: [@ccoVeille](https://github.com/ccoVeille/golangci-lint-config-examples)
 ### errcheck
  Errcheck is a program for checking for unchecked errors in Go code.
 
-### gosimple
- Linter for Go source code that specializes in simplifying code.
-
 ### govet
  Vet examines Go source code and reports suspicious constructs.
 
@@ -41,6 +40,9 @@ Source: [@ccoVeille](https://github.com/ccoVeille/golangci-lint-config-examples)
 
 ### staticcheck
  It's a set of rules from staticcheck. See https://staticcheck.io/
+
+### unused
+ Checks Go code for unused constants, variables, functions, and types.
 
 ### thelper
  make sure to use `t.Helper()` when needed
@@ -62,6 +64,12 @@ Detects errors invalid key values count
 
 ### fatcontext
 Detects nested contexts in loops or function literals
+
+### exptostd
+detect when a package or method could be replaced by one from the standard library
+
+### usetesting
+Reports uses of functions with replacement inside the testing package.
 
 ### revive
  Fast, configurable, extensible, flexible, and beautiful linter for Go.
@@ -93,6 +101,9 @@ for better readability, error messages should not be capitalized or end with pun
 
 #### errorf
 report when replacing `errors.New(fmt.Sprintf())` with `fmt.Errorf()` is possible
+
+#### exported
+check naming and commenting conventions on exported symbols.
 
 #### increment-decrement
 incrementing an integer variable by 1 is recommended to be done using the `++` operator
