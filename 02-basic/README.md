@@ -22,9 +22,6 @@ Source: https://github.com/ccoVeille/golangci-lint-config-examples/tree/main/02-
 ### errcheck
  Errcheck is a program for checking for unchecked errors in Go code.
 
-### gosimple
- Linter for Go source code that specializes in simplifying code.
-
 ### govet
  Vet examines Go source code and reports suspicious constructs.
 
@@ -33,6 +30,9 @@ Source: https://github.com/ccoVeille/golangci-lint-config-examples/tree/main/02-
 
 ### staticcheck
  It's a set of rules from staticcheck. See https://staticcheck.io/
+
+### unused
+ Checks Go code for unused constants, variables, functions, and types.
 
 ### revive
  Fast, configurable, extensible, flexible, and beautiful linter for Go.
