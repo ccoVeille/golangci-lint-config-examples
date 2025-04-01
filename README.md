@@ -18,6 +18,10 @@ The bigger the number is the more rules it has.
 
 Each variant adds rules to the previous one.
 
+## Other Options
+
+- [maratori's gist](https://gist.github.com/maratori/47a4d00457a92aa426dbd48a18776322)
+
 ## License
 
 License: MIT
