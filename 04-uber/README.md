@@ -10,126 +10,67 @@ License: MIT
 
 Source: [@ccoVeille](https://github.com/ccoVeille/golangci-lint-config-examples)
 
-## Enabled formatters
-### gofmt
- format the code with Go standard library
+## Uber Style Guidelines
 
-### gci
- make sure imports are always in a deterministic order
-
-## Enabled linters
-
-### errcheck
- Errcheck is a program for checking for unchecked errors in Go code.
-
-### govet
- Vet examines Go source code and reports suspicious constructs.
-
-### ineffassign
- Detects when assignments to existing variables are not used.
-
-### staticcheck
- It's a set of rules from staticcheck. See https://staticcheck.io/
-
-### unused
- Checks Go code for unused constants, variables, functions, and types.
-
-### thelper
- make sure to use `t.Helper()` when needed
-
-### mirror
- mirror suggests rewrites to avoid unnecessary []byte/string conversion
-
-### usestdlibvars
- detect the possibility to use variables/constants from the Go standard library.
-
-### misspell
-Finds commonly misspelled English words.
-
-### dupword
-Checks for duplicate words in the source code.
-
-### loggercheck
-Detects errors invalid key values count
-
-### fatcontext
-Detects nested contexts in loops or function literals
-
-### exptostd
-detect when a package or method could be replaced by one from the standard library
-
-### usetesting
-Reports uses of functions with replacement inside the testing package.
-
-### revive
- Fast, configurable, extensible, flexible, and beautiful linter for Go.
- Drop-in replacement of golint.
-
-#### blank-imports
-Blank import should be only in a main or test package, or have a comment justifying it.
-
-#### context-as-argument
-`context.Context()` should be the first parameter of a function when provided as argument.
-
-#### context-keys-type
-Basic types should not be used as a key in `context.WithValue`
-
-#### dot-imports
-Importing with `.` makes the programs much harder to understand
-
-#### empty-block
-Empty blocks make code less readable and could be a symptom of a bug or unfinished refactoring.
-
-#### error-naming
-for better readability, variables of type `error` must be named with the prefix `err`.
-
-#### error-return
-for better readability, the errors should be last in the list of returned values by a function.
-
-#### error-strings
-for better readability, error messages should not be capitalized or end with punctuation or a newline.
-
-#### errorf
-report when replacing `errors.New(fmt.Sprintf())` with `fmt.Errorf()` is possible
-
-#### exported
-check naming and commenting conventions on exported symbols.
-
-#### increment-decrement
-incrementing an integer variable by 1 is recommended to be done using the `++` operator
-
-#### indent-error-flow
-highlights redundant else-blocks that can be eliminated from the code
-
-#### range
-This rule suggests a shorter way of writing ranges that do not use the second value.
-
-#### receiver-naming
-receiver names in a method should reflect the struct name (p for Person, for example)
-
-#### redefines-builtin-id
-redefining built-in names (true, false, append, make) can lead to bugs very difficult to detect.
-
-#### superfluous-else
-redundant else-blocks that can be eliminated from the code.
-
-#### time-naming
-prevent confusing name for variables when using `time` package
-
-#### unexported-return
-warns when an exported function or method returns a value of an un-exported type.
-
-#### unreachable-code
-spots and proposes to remove unreachable code. also helps to spot errors
-
-#### unused-parameter
-Functions or methods with unused parameters can be a symptom of an unfinished refactoring or a bug.
-
-#### var-declaration
-report when a variable declaration can be simplified
-
-#### var-naming
-warns when initialism, variable or package naming conventions are not followed.
-
-#### funcorder
-linter that checks function and method order.
+- [Guidelines](#guidelines)
+  - [Pointers to Interfaces](#pointers-to-interfaces)
+  - [Verify Interface Compliance](#verify-interface-compliance)
+  - [Receivers and Interfaces](#receivers-and-interfaces)
+  - [Zero-value Mutexes are Valid](#zero-value-mutexes-are-valid)
+  - [Copy Slices and Maps at Boundaries](#copy-slices-and-maps-at-boundaries)
+  - [Defer to Clean Up](#defer-to-clean-up)
+  - [Channel Size is One or None](#channel-size-is-one-or-none)
+  - [Start Enums at One](#start-enums-at-one)
+  - [Use `"time"` to handle time](#use-time-to-handle-time)
+  - [Errors](#errors)
+    - [Error Types](#error-types)
+    - [Error Wrapping](#error-wrapping)
+    - [Error Naming](#error-naming)
+    - [Handle Errors Once](#handle-errors-once)
+  - [Handle Type Assertion Failures](#handle-type-assertion-failures)
+  - [Don't Panic](#dont-panic)
+  - [Use go.uber.org/atomic](#use-gouberorgatomic)
+  - [Avoid Mutable Globals](#avoid-mutable-globals)
+  - [Avoid Embedding Types in Public Structs](#avoid-embedding-types-in-public-structs)
+  - [Avoid Using Built-In Names](#avoid-using-built-in-names)
+  - [Avoid `init()`](#avoid-init)
+  [x] [Exit in Main](#exit-in-main) - Style applied through revive.deep-exit.
+  - [Use field tags in marshaled structs](#use-field-tags-in-marshaled-structs)
+  - [Don't fire-and-forget goroutines](#dont-fire-and-forget-goroutines)
+    - [Wait for goroutines to exit](#wait-for-goroutines-to-exit)
+    - [No goroutines in `init()`](#no-goroutines-in-init)
+- [Performance](#performance)
+  - [Prefer strconv over fmt](#prefer-strconv-over-fmt)
+  - [Avoid repeated string-to-byte conversions](#avoid-repeated-string-to-byte-conversions)
+  - [Prefer Specifying Container Capacity](#prefer-specifying-container-capacity)
+- [Style](#style)
+  - [Avoid overly long lines](#avoid-overly-long-lines)
+  - [Be Consistent](#be-consistent)
+  - [Group Similar Declarations](#group-similar-declarations)
+  - [Import Group Ordering](#import-group-ordering)
+  - [Package Names](#package-names)
+  - [Function Names](#function-names)
+  - [Import Aliasing](#import-aliasing)
+  [x] [Function Grouping and Ordering](#function-grouping-and-ordering) - Style applied through linter `funcorder`.
+  - [Reduce Nesting](#reduce-nesting)
+  - [Unnecessary Else](#unnecessary-else)
+  - [Top-level Variable Declarations](#top-level-variable-declarations)
+  - [Prefix Unexported Globals with _](#prefix-unexported-globals-with-_)
+  - [Embedding in Structs](#embedding-in-structs)
+  - [Local Variable Declarations](#local-variable-declarations)
+  - [nil is a valid slice](#nil-is-a-valid-slice)
+  - [Reduce Scope of Variables](#reduce-scope-of-variables)
+  - [Avoid Naked Parameters](#avoid-naked-parameters)
+  - [Use Raw String Literals to Avoid Escaping](#use-raw-string-literals-to-avoid-escaping)
+  - [Initializing Structs](#initializing-structs)
+    - [Use Field Names to Initialize Structs](#use-field-names-to-initialize-structs)
+    - [Omit Zero Value Fields in Structs](#omit-zero-value-fields-in-structs)
+    - [Use `var` for Zero Value Structs](#use-var-for-zero-value-structs)
+    - [Initializing Struct References](#initializing-struct-references)
+  - [Initializing Maps](#initializing-maps)
+  - [Format Strings outside Printf](#format-strings-outside-printf)
+  - [Naming Printf-style Functions](#naming-printf-style-functions)
+- [Patterns](#patterns)
+  - [Test Tables](#test-tables)
+  - [Functional Options](#functional-options)
+- [Linting](#linting)

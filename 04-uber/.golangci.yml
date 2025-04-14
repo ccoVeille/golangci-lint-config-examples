@@ -1,10 +1,10 @@
 ---
 # golangci-lint configuration file made by @ccoVeille
 # Source: https://github.com/ccoVeille/golangci-lint-config-examples/
-# Author: @ccoVeille
+# Author: @ccoVeille & @manuelarte
 # License: MIT
-# Variant: 03-safe
-# Version: v2.0.0
+# Variant: 04-uber
+# Version: v2.1.0
 #
 version: "2"
 
@@ -136,6 +136,10 @@ linters:
 
         # Basic types should not be used as a key in `context.WithValue`
         - name: context-keys-type
+
+        # This rule looks for program exits in functions other than main() or init()
+        # https://github.com/uber-go/guide/blob/master/style.md#exit-in-main
+        - name: deep-exit
 
         # Importing with `.` makes the programs much harder to understand
         - name: dot-imports
