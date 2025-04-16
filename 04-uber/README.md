@@ -28,13 +28,13 @@ Source: [@ccoVeille](https://github.com/ccoVeille/golangci-lint-config-examples)
     - [Error Naming](#error-naming)
     - [Handle Errors Once](#handle-errors-once)
   - [Handle Type Assertion Failures](#handle-type-assertion-failures)
-  - [Don't Panic](#dont-panic)
+  [x] [Don't Panic](#dont-panic) - Style applied through `forbidigo`.
   - [Use go.uber.org/atomic](#use-gouberorgatomic)
   - [Avoid Mutable Globals](#avoid-mutable-globals)
   - [Avoid Embedding Types in Public Structs](#avoid-embedding-types-in-public-structs)
   - [Avoid Using Built-In Names](#avoid-using-built-in-names)
-  - [Avoid `init()`](#avoid-init)
-  [x] [Exit in Main](#exit-in-main) - Style applied through revive.deep-exit.
+  [x] [Avoid `init()`](#avoid-init) - Style applied through `forbidigo`.
+  [x] [Exit in Main](#exit-in-main) - Style applied through `revive.deep-exit`.
   - [Use field tags in marshaled structs](#use-field-tags-in-marshaled-structs)
   - [Don't fire-and-forget goroutines](#dont-fire-and-forget-goroutines)
     - [Wait for goroutines to exit](#wait-for-goroutines-to-exit)

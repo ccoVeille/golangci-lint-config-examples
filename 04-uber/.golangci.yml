@@ -118,6 +118,16 @@ linters:
     - funcorder
 
   settings:
+    forbidigo:
+      forbid:
+        # Don't panic https://github.com/uber-go/guide/blob/master/style.md#dont-panic
+        - pattern: ^panic(ln)$
+          msg: Panics are a major source of cascading failures.
+        # Avoid init() https://github.com/uber-go/guide/blob/master/style.md#avoid-init
+        - pattern: ^init(ln)$
+          msg: Panics are a major source of cascading failures.
+
+
     revive:
       rules:
         # these are the default revive rules
