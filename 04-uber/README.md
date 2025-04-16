@@ -33,7 +33,7 @@ Source: [@ccoVeille](https://github.com/ccoVeille/golangci-lint-config-examples)
   - [Avoid Mutable Globals](#avoid-mutable-globals)
   - [Avoid Embedding Types in Public Structs](#avoid-embedding-types-in-public-structs)
   - [Avoid Using Built-In Names](#avoid-using-built-in-names)
-  [x] [Avoid `init()`](#avoid-init) - Style applied through `forbidigo`.
+  [x] [Avoid `init()`](#avoid-init) - Style applied through `gochecknoinits`.
   [x] [Exit in Main](#exit-in-main) - Style applied through `revive.deep-exit`.
   - [Use field tags in marshaled structs](#use-field-tags-in-marshaled-structs)
   - [Don't fire-and-forget goroutines](#dont-fire-and-forget-goroutines)

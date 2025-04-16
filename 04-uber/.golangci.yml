@@ -117,16 +117,15 @@ linters:
     # Follows function/method order described in https://github.com/uber-go/guide/blob/master/style.md#function-grouping-and-ordering
     - funcorder
 
+    # Avoid init() https://github.com/uber-go/guide/blob/master/style.md#avoid-init
+    - gochecknoinits
+
   settings:
     forbidigo:
       forbid:
         # Don't panic https://github.com/uber-go/guide/blob/master/style.md#dont-panic
         - pattern: ^panic(ln)$
           msg: Panics are a major source of cascading failures.
-        # Avoid init() https://github.com/uber-go/guide/blob/master/style.md#avoid-init
-        - pattern: ^init(ln)$
-          msg: Panics are a major source of cascading failures.
-
 
     revive:
       rules:
