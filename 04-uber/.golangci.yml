@@ -129,12 +129,6 @@ linters:
 
     revive:
       rules:
-        # these are the default revive rules
-        # you can remove the whole "rules" node if you want
-        # BUT
-        # ! /!\ they all need to be present when you want to add more rules than the default ones
-        # otherwise, you won't have the default rules, but only the ones you define in the "rules" node
-
         # Blank import should be only in a main or test package, or have a comment justifying it.
         - name: blank-imports
 
@@ -226,21 +220,3 @@ linters:
       extra-words: []
       #  - typo: "whattever"
       #    correction: "whatever"
-
-output:
-  # Order to use when sorting results.
-  # Possible values: `file`, `linter`, and `severity`.
-  #
-  # If the severity values are inside the following list, they are ordered in this order:
-  #   1. error
-  #   2. warning
-  #   3. high
-  #   4. medium
-  #   5. low
-  # Either they are sorted alphabetically.
-  #
-  # Default: ["file"]
-  sort-order:
-    - linter
-    - severity
-    - file # filepath, line, and column.

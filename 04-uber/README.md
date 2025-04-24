@@ -12,7 +12,7 @@ Source: [@ccoVeille](https://github.com/ccoVeille/golangci-lint-config-examples)
 
 ## Uber Style Guidelines
 
-- [Guidelines](#guidelines)
+- [Guidelines](https://github.com/uber-go/guide/blob/master/style.md#guidelines)
   - [Pointers to Interfaces](#pointers-to-interfaces)
   - [Verify Interface Compliance](#verify-interface-compliance)
   - [Receivers and Interfaces](#receivers-and-interfaces)
