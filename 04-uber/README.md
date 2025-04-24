@@ -25,7 +25,7 @@ Source: [@ccoVeille](https://github.com/ccoVeille/golangci-lint-config-examples)
   - [Errors](#errors)
     - [Error Types](#error-types)
     - [Error Wrapping](#error-wrapping)
-    - [Error Naming](#error-naming)
+    [x] [Error Naming](#error-naming) - Style applied through `errname`
     - [Handle Errors Once](#handle-errors-once)
   - [Handle Type Assertion Failures](#handle-type-assertion-failures)
   [x] [Don't Panic](#dont-panic) - Style applied through `forbidigo`.
@@ -44,7 +44,7 @@ Source: [@ccoVeille](https://github.com/ccoVeille/golangci-lint-config-examples)
   - [Avoid repeated string-to-byte conversions](#avoid-repeated-string-to-byte-conversions)
   - [Prefer Specifying Container Capacity](#prefer-specifying-container-capacity)
 - [Style](#style)
-  - [Avoid overly long lines](#avoid-overly-long-lines)
+  [x] [Avoid overly long lines](#avoid-overly-long-lines) - Style applied through `lll`
   - [Be Consistent](#be-consistent)
   - [Group Similar Declarations](#group-similar-declarations)
   - [Import Group Ordering](#import-group-ordering)

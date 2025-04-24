@@ -71,6 +71,9 @@ linters:
     # Errcheck is a program for checking for unchecked errors in Go code.
     - errcheck
 
+    # Errname Checks that sentinel errors are prefixed with the Err and error types are suffixed with the Error
+    - errname
+
     # Vet examines Go source code and reports suspicious constructs.
     - govet
 
@@ -102,6 +105,9 @@ linters:
     # Checks for duplicate words in the source code.
     - dupword
 
+    # LLL Reports long lines.
+    - lll
+
     # linter to detect errors invalid key values count
     - loggercheck
 
@@ -114,10 +120,10 @@ linters:
     # Reports uses of functions with replacement inside the testing package.
     - usetesting
 
-    # Follows function/method order described in https://github.com/uber-go/guide/blob/master/style.md#function-grouping-and-ordering
+    # Funcorder Follows function/method order described in https://github.com/uber-go/guide/blob/master/style.md#function-grouping-and-ordering
     - funcorder
 
-    # Avoid init() https://github.com/uber-go/guide/blob/master/style.md#avoid-init
+    # GoCheckNoInits Avoid init() https://github.com/uber-go/guide/blob/master/style.md#avoid-init
     - gochecknoinits
 
   settings:
@@ -126,7 +132,8 @@ linters:
         # Don't panic https://github.com/uber-go/guide/blob/master/style.md#dont-panic
         - pattern: ^panic(ln)$
           msg: Panics are a major source of cascading failures.
-
+    lll:
+      line-length: 99
     revive:
       rules:
         # Blank import should be only in a main or test package, or have a comment justifying it.
