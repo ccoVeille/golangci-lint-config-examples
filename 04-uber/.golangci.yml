@@ -126,6 +126,9 @@ linters:
     # GoCheckNoInits Avoid init() https://github.com/uber-go/guide/blob/master/style.md#avoid-init
     - gochecknoinits
 
+    # Perfsprint Checks that fmt.Sprintf can be replaced with a faster alternative.
+    - perfsprint
+
   settings:
     forbidigo:
       forbid:

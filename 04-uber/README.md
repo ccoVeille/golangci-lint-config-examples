@@ -40,7 +40,7 @@ Source: [@ccoVeille](https://github.com/ccoVeille/golangci-lint-config-examples)
     - [Wait for goroutines to exit](#wait-for-goroutines-to-exit)
     - [No goroutines in `init()`](#no-goroutines-in-init)
 - [Performance](#performance)
-  - [Prefer strconv over fmt](#prefer-strconv-over-fmt)
+  [x] [Prefer strconv over fmt](#prefer-strconv-over-fmt) - Style applied through `perfsprint`
   - [Avoid repeated string-to-byte conversions](#avoid-repeated-string-to-byte-conversions)
   - [Prefer Specifying Container Capacity](#prefer-specifying-container-capacity)
 - [Style](#style)
