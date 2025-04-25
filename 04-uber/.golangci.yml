@@ -23,12 +23,12 @@ formatters:
       simplify: true
       rewrite-rules:
         # replace `interface{}` with `any` in the code on format
-        - pattern: 'interface{}'
-          replacement: 'any'
+        - pattern: "interface{}"
+          replacement: "any"
 
     # make sure imports are always in a deterministic order
     # https://github.com/daixiang0/gci/
-    gci:  # define the section orders for imports
+    gci: # define the section orders for imports
       sections:
         # Standard section: captures all standard packages.
         - standard
@@ -70,6 +70,9 @@ linters:
   enable:
     # Errcheck is a program for checking for unchecked errors in Go code.
     - errcheck
+
+    # Errorlint is a linter for that can be used to find code that will cause problems with the error wrapping scheme introduced in Go 1.13.
+    - errorlint
 
     # Errname Checks that sentinel errors are prefixed with the Err and error types are suffixed with the Error
     - errname

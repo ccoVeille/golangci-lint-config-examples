@@ -24,7 +24,7 @@ Source: [@ccoVeille](https://github.com/ccoVeille/golangci-lint-config-examples)
   - [Use `"time"` to handle time](https://github.com/uber-go/guide/blob/master/style.md#use-time-to-handle-time)
   - [Errors](https://github.com/uber-go/guide/blob/master/style.md#errors)
     - [Error Types](https://github.com/uber-go/guide/blob/master/style.md#error-types)
-    - [Error Wrapping](https://github.com/uber-go/guide/blob/master/style.md#error-wrapping)
+    - [x] [Error Wrapping](https://github.com/uber-go/guide/blob/master/style.md#error-wrapping) - Sytle applied through `errorlint`
     - [x] [Error Naming](https://github.com/uber-go/guide/blob/master/style.md#error-naming) - Style applied through `errname`
     - [Handle Errors Once](#handle-errors-once)
   - [Handle Type Assertion Failures](#handle-type-assertion-failures)
