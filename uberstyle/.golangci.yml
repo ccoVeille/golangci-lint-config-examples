@@ -3,7 +3,7 @@
 # Source: https://github.com/ccoVeille/golangci-lint-config-examples/
 # Author: @ccoVeille & @manuelarte
 # License: MIT
-# Variant: 04-uber
+# Variant: uberstyle
 # Version: v2.1.0
 #
 version: "2"
