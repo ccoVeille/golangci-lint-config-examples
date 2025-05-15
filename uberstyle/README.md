@@ -24,8 +24,8 @@ Source: [@ccoVeille](https://github.com/ccoVeille/golangci-lint-config-examples)
   - [Use `"time"` to handle time](https://github.com/uber-go/guide/blob/master/style.md#use-time-to-handle-time)
   - [Errors](https://github.com/uber-go/guide/blob/master/style.md#errors)
     - [Error Types](https://github.com/uber-go/guide/blob/master/style.md#error-types)
-    - [x] [Error Wrapping](https://github.com/uber-go/guide/blob/master/style.md#error-wrapping) - Sytle applied through `errorlint`
-    - [x] [Error Naming](https://github.com/uber-go/guide/blob/master/style.md#error-naming) - Style applied through `errname`
+    - [x] [Error Wrapping](https://github.com/uber-go/guide/blob/master/style.md#error-wrapping) - Sytle applied through `errorlint`.
+    - [x] [Error Naming](https://github.com/uber-go/guide/blob/master/style.md#error-naming) - Style applied through `errname`.
     - [Handle Errors Once](#handle-errors-once)
   - [Handle Type Assertion Failures](#handle-type-assertion-failures)
   - [x] [Don't Panic](https://github.com/uber-go/guide/blob/master/style.md#dont-panic) - Style applied through `forbidigo`.
@@ -35,25 +35,25 @@ Source: [@ccoVeille](https://github.com/ccoVeille/golangci-lint-config-examples)
   - [Avoid Using Built-In Names](https://github.com/uber-go/guide/blob/master/style.md#avoid-using-built-in-names)
   - [x] [Avoid `init()`](https://github.com/uber-go/guide/blob/master/style.md#avoid-init) - Style applied through `gochecknoinits`.
   - [x] [Exit in Main](https://github.com/uber-go/guide/blob/master/style.md#exit-in-main) - Style applied through `revive.deep-exit`.
-  - [x] [Use field tags in marshaled structs](https://github.com/uber-go/guide/blob/master/style.md#use-field-tags-in-marshaled-structs) - Style applied through `musttag`
+  - [x] [Use field tags in marshaled structs](https://github.com/uber-go/guide/blob/master/style.md#use-field-tags-in-marshaled-structs) - Style applied through `musttag`.
   - [Don't fire-and-forget goroutines](https://github.com/uber-go/guide/blob/master/style.md#dont-fire-and-forget-goroutines)
     - [Wait for goroutines to exit](https://github.com/uber-go/guide/blob/master/style.md#wait-for-goroutines-to-exit)
     - [No goroutines in `init()`](https://github.com/uber-go/guide/blob/master/style.md#no-goroutines-in-init)
 - [Performance](https://github.com/uber-go/guide/blob/master/style.md#performance)
-  - [x] [Prefer strconv over fmt](https://github.com/uber-go/guide/blob/master/style.md#prefer-strconv-over-fmt) - Style applied through `perfsprint.string-format`
+  - [x] [Prefer strconv over fmt](https://github.com/uber-go/guide/blob/master/style.md#prefer-strconv-over-fmt) - Style applied through `perfsprint.string-format`.
   - [Avoid repeated string-to-byte conversions](https://github.com/uber-go/guide/blob/master/style.md#avoid-repeated-string-to-byte-conversions)
   - [Prefer Specifying Container Capacity](https://github.com/uber-go/guide/blob/master/style.md#prefer-specifying-container-capacity)
 - [Style](https://github.com/uber-go/guide/blob/master/style.md#style)
-  - [x] [Avoid overly long lines](https://github.com/uber-go/guide/blob/master/style.md#avoid-overly-long-lines) - Style applied through `lll`
+  - [x] [Avoid overly long lines](https://github.com/uber-go/guide/blob/master/style.md#avoid-overly-long-lines) - Style applied through `lll`.
   - [Be Consistent](https://github.com/uber-go/guide/blob/master/style.md#be-consistent)
   - [Group Similar Declarations](https://github.com/uber-go/guide/blob/master/style.md#group-similar-declarations)
   - [Import Group Ordering](https://github.com/uber-go/guide/blob/master/style.md#import-group-ordering)
-  - [x] [Package Names](https://github.com/uber-go/guide/blob/master/style.md#package-names) - Style applied through linter `revive.var-naming`
-  - [x] [Function Names](https://github.com/uber-go/guide/blob/master/style.md#function-names) - Style applied through linter `revive.var-naming`
+  - [x] [Package Names](https://github.com/uber-go/guide/blob/master/style.md#package-names) - Style applied through linter `revive.var-naming`.
+  - [x] [Function Names](https://github.com/uber-go/guide/blob/master/style.md#function-names) - Style applied through linter `revive.var-naming`.
   - [Import Aliasing](https://github.com/uber-go/guide/blob/master/style.md#import-aliasing)
   - [x] [Function Grouping and Ordering](https://github.com/uber-go/guide/blob/master/style.md#function-grouping-and-ordering) - Style applied through linter `funcorder`.
-  - [Reduce Nesting](https://github.com/uber-go/guide/blob/master/style.md#reduce-nesting)
-  - [Unnecessary Else](https://github.com/uber-go/guide/blob/master/style.md#unnecessary-else)
+  - [x] [Reduce Nesting](https://github.com/uber-go/guide/blob/master/style.md#reduce-nesting) - Style applied through `nestif`.
+  - [x] [Unnecessary Else](https://github.com/uber-go/guide/blob/master/style.md#unnecessary-else) - Style applied through `revive.superfluous-else`.
   - [Top-level Variable Declarations](https://github.com/uber-go/guide/blob/master/style.md#top-level-variable-declarations)
   - [Prefix Unexported Globals with _](https://github.com/uber-go/guide/blob/master/style.md#prefix-unexported-globals-with-_)
   - [Embedding in Structs](https://github.com/uber-go/guide/blob/master/style.md#embedding-in-structs)
@@ -67,7 +67,7 @@ Source: [@ccoVeille](https://github.com/ccoVeille/golangci-lint-config-examples)
     - [Omit Zero Value Fields in Structs](https://github.com/uber-go/guide/blob/master/style.md#omit-zero-value-fields-in-structs)
     - [Use `var` for Zero Value Structs](https://github.com/uber-go/guide/blob/master/style.md#use-var-for-zero-value-structs)
     - [Initializing Struct References](https://github.com/uber-go/guide/blob/master/style.md#initializing-struct-references)
-  - [x] [Initializing Maps](https://github.com/uber-go/guide/blob/master/style.md#initializing-maps) - Style applied through `revive.enforce-slice-style`
+  - [x] [Initializing Maps](https://github.com/uber-go/guide/blob/master/style.md#initializing-maps) - Style applied through `revive.enforce-slice-style`.
   - [Format Strings outside Printf](https://github.com/uber-go/guide/blob/master/style.md#format-strings-outside-printf)
   - [Naming Printf-style Functions](https://github.com/uber-go/guide/blob/master/style.md#naming-printf-style-functions)
 - [Patterns](https://github.com/uber-go/guide/blob/master/style.md#patterns)
