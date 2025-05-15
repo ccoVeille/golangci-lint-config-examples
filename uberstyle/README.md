@@ -40,7 +40,7 @@ Source: [@ccoVeille](https://github.com/ccoVeille/golangci-lint-config-examples)
     - [Wait for goroutines to exit](https://github.com/uber-go/guide/blob/master/style.md#wait-for-goroutines-to-exit)
     - [No goroutines in `init()`](https://github.com/uber-go/guide/blob/master/style.md#no-goroutines-in-init)
 - [Performance](https://github.com/uber-go/guide/blob/master/style.md#performance)
-  - [x] [Prefer strconv over fmt](https://github.com/uber-go/guide/blob/master/style.md#prefer-strconv-over-fmt) - Style applied through `perfsprint`
+  - [x] [Prefer strconv over fmt](https://github.com/uber-go/guide/blob/master/style.md#prefer-strconv-over-fmt) - Style applied through `perfsprint.string-format`
   - [Avoid repeated string-to-byte conversions](https://github.com/uber-go/guide/blob/master/style.md#avoid-repeated-string-to-byte-conversions)
   - [Prefer Specifying Container Capacity](https://github.com/uber-go/guide/blob/master/style.md#prefer-specifying-container-capacity)
 - [Style](https://github.com/uber-go/guide/blob/master/style.md#style)
@@ -48,8 +48,8 @@ Source: [@ccoVeille](https://github.com/ccoVeille/golangci-lint-config-examples)
   - [Be Consistent](https://github.com/uber-go/guide/blob/master/style.md#be-consistent)
   - [Group Similar Declarations](https://github.com/uber-go/guide/blob/master/style.md#group-similar-declarations)
   - [Import Group Ordering](https://github.com/uber-go/guide/blob/master/style.md#import-group-ordering)
-  - [Package Names](https://github.com/uber-go/guide/blob/master/style.md#package-names)
-  - [Function Names](https://github.com/uber-go/guide/blob/master/style.md#function-names)
+  - [x] [Package Names](https://github.com/uber-go/guide/blob/master/style.md#package-names) - Style applied through linter `revive.var-naming`
+  - [x] [Function Names](https://github.com/uber-go/guide/blob/master/style.md#function-names) - Style applied through linter `revive.var-naming`
   - [Import Aliasing](https://github.com/uber-go/guide/blob/master/style.md#import-aliasing)
   - [x] [Function Grouping and Ordering](https://github.com/uber-go/guide/blob/master/style.md#function-grouping-and-ordering) - Style applied through linter `funcorder`.
   - [Reduce Nesting](https://github.com/uber-go/guide/blob/master/style.md#reduce-nesting)
@@ -67,7 +67,7 @@ Source: [@ccoVeille](https://github.com/ccoVeille/golangci-lint-config-examples)
     - [Omit Zero Value Fields in Structs](https://github.com/uber-go/guide/blob/master/style.md#omit-zero-value-fields-in-structs)
     - [Use `var` for Zero Value Structs](https://github.com/uber-go/guide/blob/master/style.md#use-var-for-zero-value-structs)
     - [Initializing Struct References](https://github.com/uber-go/guide/blob/master/style.md#initializing-struct-references)
-  - [Initializing Maps](https://github.com/uber-go/guide/blob/master/style.md#initializing-maps)
+  - [x] [Initializing Maps](https://github.com/uber-go/guide/blob/master/style.md#initializing-maps) - Style applied through `revive.enforce-slice-style`
   - [Format Strings outside Printf](https://github.com/uber-go/guide/blob/master/style.md#format-strings-outside-printf)
   - [Naming Printf-style Functions](https://github.com/uber-go/guide/blob/master/style.md#naming-printf-style-functions)
 - [Patterns](https://github.com/uber-go/guide/blob/master/style.md#patterns)

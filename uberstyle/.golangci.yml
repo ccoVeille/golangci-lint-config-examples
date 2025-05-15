@@ -168,6 +168,11 @@ linters:
         # Empty blocks make code less readable and could be a symptom of a bug or unfinished refactoring.
         - name: empty-block
 
+        # Enforces consistent usage of make(map[type]type)
+        - name: enforce-map-style
+          arguments:
+            - "make"
+
         # for better readability, variables of type `error` must be named with the prefix `err`.
         - name: error-naming
 
