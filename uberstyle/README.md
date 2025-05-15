@@ -31,7 +31,7 @@ Source: [@ccoVeille](https://github.com/ccoVeille/golangci-lint-config-examples)
   - [x] [Don't Panic](https://github.com/uber-go/guide/blob/master/style.md#dont-panic) - Style applied through `forbidigo`.
   - [Use go.uber.org/atomic](https://github.com/uber-go/guide/blob/master/style.md#use-gouberorgatomic)
   - [Avoid Mutable Globals](https://github.com/uber-go/guide/blob/master/style.md#avoid-mutable-globals)
-  - [Avoid Embedding Types in Public Structs](https://github.com/uber-go/guide/blob/master/style.md#avoid-embedding-types-in-public-structs)
+  - [x] [Avoid Embedding Types in Public Structs](https://github.com/uber-go/guide/blob/master/style.md#avoid-embedding-types-in-public-structs) - Style applied through `embeddedstructfieldcheck`
   - [Avoid Using Built-In Names](https://github.com/uber-go/guide/blob/master/style.md#avoid-using-built-in-names)
   - [x] [Avoid `init()`](https://github.com/uber-go/guide/blob/master/style.md#avoid-init) - Style applied through `gochecknoinits`.
   - [x] [Exit in Main](https://github.com/uber-go/guide/blob/master/style.md#exit-in-main) - Style applied through `revive.deep-exit`.
@@ -73,4 +73,4 @@ Source: [@ccoVeille](https://github.com/ccoVeille/golangci-lint-config-examples)
 - [Patterns](https://github.com/uber-go/guide/blob/master/style.md#patterns)
   - [Test Tables](https://github.com/uber-go/guide/blob/master/style.md#test-tables)
   - [Functional Options](https://github.com/uber-go/guide/blob/master/style.md#functional-options)
-- [Linting](https://github.com/uber-go/guide/blob/master/style.md#linting)
+- [x] [Linting](https://github.com/uber-go/guide/blob/master/style.md#linting) - All the linter recommendations are enabled. 

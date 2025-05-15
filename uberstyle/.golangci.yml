@@ -4,7 +4,7 @@
 # Author: @ccoVeille & @manuelarte
 # License: MIT
 # Variant: uberstyle
-# Version: v2.1.0
+# Version: v2.2.0
 #
 version: "2"
 
@@ -70,6 +70,9 @@ linters:
   #
   # enable some extra linters
   enable:
+    # Embeddedstructfieldcheck checks embedded types inside a struct.
+    - embeddedstructfieldcheck
+
     # Errcheck is a program for checking for unchecked errors in Go code.
     - errcheck
 
