@@ -63,7 +63,7 @@ Source: [@ccoVeille](https://github.com/ccoVeille/golangci-lint-config-examples)
   - [Avoid Naked Parameters](https://github.com/uber-go/guide/blob/master/style.md#avoid-naked-parameters)
   - [Use Raw String Literals to Avoid Escaping](https://github.com/uber-go/guide/blob/master/style.md#use-raw-string-literals-to-avoid-escaping)
   - [Initializing Structs](https://github.com/uber-go/guide/blob/master/style.md#initializing-structs)
-    - [Use Field Names to Initialize Structs](https://github.com/uber-go/guide/blob/master/style.md#use-field-names-to-initialize-structs)
+    - [x] [Use Field Names to Initialize Structs](https://github.com/uber-go/guide/blob/master/style.md#use-field-names-to-initialize-structs) - Style applied through `go vet.composites`.
     - [Omit Zero Value Fields in Structs](https://github.com/uber-go/guide/blob/master/style.md#omit-zero-value-fields-in-structs)
     - [Use `var` for Zero Value Structs](https://github.com/uber-go/guide/blob/master/style.md#use-var-for-zero-value-structs)
     - [Initializing Struct References](https://github.com/uber-go/guide/blob/master/style.md#initializing-struct-references)
