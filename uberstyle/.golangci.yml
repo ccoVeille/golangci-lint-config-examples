@@ -49,8 +49,8 @@ linters:
       # you should not use this on recent code you write from scratch
       # More information: https://golangci-lint.run/usage/false-positives/#comments
       #
-      # Please uncomment the following line if your code is not using the godoc format
-      - comments
+      # Please uncomment the following line if your code is using the godoc format
+      # - comments
 
       # Common false positives
       # feel free to remove this if you don't have any false positives
