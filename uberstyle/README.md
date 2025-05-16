@@ -56,7 +56,7 @@ Source: [@ccoVeille](https://github.com/ccoVeille/golangci-lint-config-examples)
   - [x] [Unnecessary Else](https://github.com/uber-go/guide/blob/master/style.md#unnecessary-else) - Style applied through `revive.superfluous-else`.
   - [Top-level Variable Declarations](https://github.com/uber-go/guide/blob/master/style.md#top-level-variable-declarations)
   - [Prefix Unexported Globals with _](https://github.com/uber-go/guide/blob/master/style.md#prefix-unexported-globals-with-_)
-  - [Embedding in Structs](https://github.com/uber-go/guide/blob/master/style.md#embedding-in-structs)
+  - [x] [Embedding in Structs](https://github.com/uber-go/guide/blob/master/style.md#embedding-in-structs) - Style applied through `embeddedstructfieldcheck`.
   - [Local Variable Declarations](https://github.com/uber-go/guide/blob/master/style.md#local-variable-declarations)
   - [nil is a valid slice](https://github.com/uber-go/guide/blob/master/style.md#nil-is-a-valid-slice)
   - [Reduce Scope of Variables](https://github.com/uber-go/guide/blob/master/style.md#reduce-scope-of-variables)
