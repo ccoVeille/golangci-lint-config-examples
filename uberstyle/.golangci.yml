@@ -12,8 +12,6 @@ formatters:
   enable:
     # format the code
     - gofmt
-    # format the block of imports
-    - gci
     # checks if the code and import statements are formatted according to the 'goimports' command.
     - goimports
 
@@ -27,17 +25,6 @@ formatters:
         # replace `interface{}` with `any` in the code on format
         - pattern: "interface{}"
           replacement: "any"
-
-    # make sure imports are always in a deterministic order
-    # https://github.com/daixiang0/gci/
-    gci: # define the section orders for imports
-      sections:
-        # Standard section: captures all standard packages.
-        - standard
-        # Default section: catchall that is not standard or custom
-        - default
-        # linters that related to local tool, so they should be separated
-        - localmodule
 
 linters:
   exclusions:
