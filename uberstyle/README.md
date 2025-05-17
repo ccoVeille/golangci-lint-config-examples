@@ -50,7 +50,7 @@ Source: [@ccoVeille](https://github.com/ccoVeille/golangci-lint-config-examples)
   - [Import Group Ordering](https://github.com/uber-go/guide/blob/master/style.md#import-group-ordering)
   - [x] [Package Names](https://github.com/uber-go/guide/blob/master/style.md#package-names) - Style applied through linter `revive.var-naming`.
   - [x] [Function Names](https://github.com/uber-go/guide/blob/master/style.md#function-names) - Style applied through linter `revive.var-naming`.
-  - [Import Aliasing](https://github.com/uber-go/guide/blob/master/style.md#import-aliasing)
+  - [x] [Import Aliasing](https://github.com/uber-go/guide/blob/master/style.md#import-aliasing) - Style applied through `importas.no-extra-aliases`.
   - [x] [Function Grouping and Ordering](https://github.com/uber-go/guide/blob/master/style.md#function-grouping-and-ordering) - Style applied through linter `funcorder`.
   - [x] [Reduce Nesting](https://github.com/uber-go/guide/blob/master/style.md#reduce-nesting) - Style applied through `nestif`.
   - [x] [Unnecessary Else](https://github.com/uber-go/guide/blob/master/style.md#unnecessary-else) - Style applied through `revive.superfluous-else`.

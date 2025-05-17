@@ -75,6 +75,9 @@ linters:
     # Detects when assignments to existing variables are not used.
     - ineffassign
 
+    # Enforces consistent import aliases.
+    - importas
+
     # It's a set of rules from staticcheck. See https://staticcheck.io/
     - staticcheck
 
@@ -133,6 +136,9 @@ linters:
         # Don't panic https://github.com/uber-go/guide/blob/master/style.md#dont-panic
         - pattern: ^panic(ln)$
           msg: Panics are a major source of cascading failures.
+    importas:
+      # Do not allow non-required aliases.
+      no-extra-aliases: true
     lll:
       line-length: 99
     revive:
