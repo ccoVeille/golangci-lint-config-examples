@@ -84,6 +84,9 @@ linters:
     # Checks Go code for unused constants, variables, functions and types.
     - unused
 
+    # Checks that package variables are not reassigned.
+    - reassign
+
     # Fast, configurable, extensible, flexible, and beautiful linter for Go.
     # Drop-in replacement of golint.
     - revive
@@ -131,6 +134,8 @@ linters:
     - perfsprint
 
   settings:
+    embeddedstructfieldcheck:
+      forbid-mutex: true
     forbidigo:
       forbid:
         # Don't panic https://github.com/uber-go/guide/blob/master/style.md#dont-panic

@@ -30,7 +30,7 @@ Source: [@ccoVeille](https://github.com/ccoVeille/golangci-lint-config-examples)
   - [Handle Type Assertion Failures](#handle-type-assertion-failures)
   - [x] [Don't Panic](https://github.com/uber-go/guide/blob/master/style.md#dont-panic) - Style applied through `forbidigo`.
   - [Use go.uber.org/atomic](https://github.com/uber-go/guide/blob/master/style.md#use-gouberorgatomic)
-  - [Avoid Mutable Globals](https://github.com/uber-go/guide/blob/master/style.md#avoid-mutable-globals)
+  - [x] [Avoid Mutable Globals](https://github.com/uber-go/guide/blob/master/style.md#avoid-mutable-globals) - Style applied through `reassign`.
   - [x] [Avoid Embedding Types in Public Structs](https://github.com/uber-go/guide/blob/master/style.md#avoid-embedding-types-in-public-structs) - Style applied through `embeddedstructfieldcheck`
   - [Avoid Using Built-In Names](https://github.com/uber-go/guide/blob/master/style.md#avoid-using-built-in-names)
   - [x] [Avoid `init()`](https://github.com/uber-go/guide/blob/master/style.md#avoid-init) - Style applied through `gochecknoinits`.
