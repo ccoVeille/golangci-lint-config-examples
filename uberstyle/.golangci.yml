@@ -174,6 +174,10 @@ linters:
           arguments:
             - "make"
 
+        - name: enforce-slice-style
+          arguments:
+            - "make"
+
         # for better readability, variables of type `error` must be named with the prefix `err`.
         - name: error-naming
 
