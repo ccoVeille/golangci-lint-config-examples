@@ -14,8 +14,14 @@ formatters:
     - gofmt
     # checks if the code and import statements are formatted according to the 'goimports' command.
     - goimports
+    # checks if code and import statements are formatted, with additional rules.
+    - gci
 
   settings:
+    gci:
+      sections:
+        - standard
+        - default
     # format the code with Go standard library
     gofmt:
       # simplify the code

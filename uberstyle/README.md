@@ -47,7 +47,7 @@ Source: [@ccoVeille](https://github.com/ccoVeille/golangci-lint-config-examples)
   - [x] [Avoid overly long lines](https://github.com/uber-go/guide/blob/master/style.md#avoid-overly-long-lines) - Style applied through `lll`.
   - [Be Consistent](https://github.com/uber-go/guide/blob/master/style.md#be-consistent)
   - [Group Similar Declarations](https://github.com/uber-go/guide/blob/master/style.md#group-similar-declarations)
-  - [Import Group Ordering](https://github.com/uber-go/guide/blob/master/style.md#import-group-ordering)
+  - [x] [Import Group Ordering](https://github.com/uber-go/guide/blob/master/style.md#import-group-ordering)
   - [x] [Package Names](https://github.com/uber-go/guide/blob/master/style.md#package-names) - Style applied through linter `revive.var-naming`.
   - [x] [Function Names](https://github.com/uber-go/guide/blob/master/style.md#function-names) - Style applied through linter `revive.var-naming`.
   - [x] [Import Aliasing](https://github.com/uber-go/guide/blob/master/style.md#import-aliasing) - Style applied through `importas.no-extra-aliases`.
@@ -73,4 +73,4 @@ Source: [@ccoVeille](https://github.com/ccoVeille/golangci-lint-config-examples)
 - [Patterns](https://github.com/uber-go/guide/blob/master/style.md#patterns)
   - [Test Tables](https://github.com/uber-go/guide/blob/master/style.md#test-tables)
   - [Functional Options](https://github.com/uber-go/guide/blob/master/style.md#functional-options)
-- [x] [Linting](https://github.com/uber-go/guide/blob/master/style.md#linting) - All the linter recommendations are enabled. 
+- [x] [Linting](https://github.com/uber-go/guide/blob/master/style.md#linting) - All the linter recommendations are enabled.
