@@ -12,8 +12,6 @@ formatters:
   enable:
     # format the code
     - gofmt
-    # checks if the code and import statements are formatted according to the 'goimports' command.
-    - goimports
     # checks if code and import statements are formatted, with additional rules.
     - gci
 
