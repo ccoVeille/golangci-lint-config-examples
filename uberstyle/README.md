@@ -27,7 +27,7 @@ Source: [@ccoVeille](https://github.com/ccoVeille/golangci-lint-config-examples)
     - [x] [Error Wrapping](https://github.com/uber-go/guide/blob/master/style.md#error-wrapping) - Sytle applied through `errorlint`.
     - [x] [Error Naming](https://github.com/uber-go/guide/blob/master/style.md#error-naming) - Style applied through `errname`.
     - [Handle Errors Once](#handle-errors-once)
-  - [Handle Type Assertion Failures](#handle-type-assertion-failures)
+  - [x] [Handle Type Assertion Failures](#handle-type-assertion-failures) - Style applied through `errcheck.check-type-assertions`.
   - [x] [Don't Panic](https://github.com/uber-go/guide/blob/master/style.md#dont-panic) - Style applied through `forbidigo`.
   - [Use go.uber.org/atomic](https://github.com/uber-go/guide/blob/master/style.md#use-gouberorgatomic)
   - [x] [Avoid Mutable Globals](https://github.com/uber-go/guide/blob/master/style.md#avoid-mutable-globals) - Style applied through `reassign`.

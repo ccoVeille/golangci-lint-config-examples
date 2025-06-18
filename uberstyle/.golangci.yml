@@ -140,6 +140,9 @@ linters:
   settings:
     embeddedstructfieldcheck:
       forbid-mutex: true
+    errcheck:
+      # Report about not checking of errors in type assertions: `a := b.(MyStruct)`.
+      check-type-assertions: true
     forbidigo:
       forbid:
         # Don't panic https://github.com/uber-go/guide/blob/master/style.md#dont-panic
