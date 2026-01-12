@@ -1,0 +1,259 @@
+---
+# golangci-lint configuration file made by @ccoVeille
+# Source: https://github.com/ccoVeille/golangci-lint-config-examples/
+# Author: @ccoVeille & @manuelarte
+# License: MIT
+# Variant: uberstyle
+# Version: v2.1.0
+#
+version: "2"
+
+formatters:
+  enable:
+    # format the code
+    - gofmt
+    # checks if code and import statements are formatted, with additional rules.
+    - gci
+
+  settings:
+    gci:
+      sections:
+        - standard
+        - default
+    # format the code with Go standard library
+    gofmt:
+      # simplify the code
+      # https://pkg.go.dev/cmd/gofmt#hdr-The_simplify_command
+      simplify: true
+      rewrite-rules:
+        # replace `interface{}` with `any` in the code on format
+        - pattern: "interface{}"
+          replacement: "any"
+
+linters:
+  exclusions:
+    # these presets where present in the v1 version of golangci-lint
+    # it's interesting to keep them when migrating, but removing them should be the goal
+    presets:
+      # exclude check on comments format in godoc
+      # These are common false positives in poor code
+      # you should not use this on recent code you write from scratch
+      # More information: https://golangci-lint.run/usage/false-positives/#comments
+      #
+      # Please comment the following line if your code is using the godoc format
+      - comments
+
+      # Common false positives
+      # feel free to remove this if you don't have any false positives
+      # More information: https://golangci-lint.run/usage/false-positives/#common-false-positives
+      - common-false-positives
+
+      # Legacy preset is not recommended anymore
+      # More information: https://golangci-lint.run/usage/false-positives/#legacy
+      - legacy
+
+      # std-error-handling is a set of rules that avoid reporting unhandled errors on common functions/methods
+      # More information: https://golangci-lint.run/usage/false-positives/#std-error-handling
+      - std-error-handling
+
+  # some linters are enabled by default
+  # https://golangci-lint.run/usage/linters/
+  #
+  # enable some extra linters
+  enable:
+    # Embeddedstructfieldcheck checks embedded types inside a struct.
+    - embeddedstructfieldcheck
+
+    # Errcheck is a program for checking for unchecked errors in Go code.
+    - errcheck
+
+    # Errorlint is a linter for that can be used to find code that will cause problems with the error wrapping scheme introduced in Go 1.13.
+    - errorlint
+
+    # Errname Checks that sentinel errors are prefixed with the Err and error types are suffixed with the Error
+    - errname
+
+    # Vet examines Go source code and reports suspicious constructs.
+    - govet
+
+    # Detects when assignments to existing variables are not used.
+    - ineffassign
+
+    # Enforces consistent import aliases.
+    - importas
+
+    # It's a set of rules from staticcheck. See https://staticcheck.io/
+    - staticcheck
+
+    # Checks Go code for unused constants, variables, functions and types.
+    - unused
+
+    # Checks that package variables are not reassigned.
+    - reassign
+
+    # Fast, configurable, extensible, flexible, and beautiful linter for Go.
+    # Drop-in replacement of golint.
+    - revive
+
+    # make sure to use t.Helper() when needed
+    - thelper
+
+    # Enforce field tags in (un)marshaled structs.
+    - musttag
+
+    # mirror suggests rewrites to avoid unnecessary []byte/string conversion
+    - mirror
+
+    # detect the possibility to use variables/constants from the Go standard library.
+    - usestdlibvars
+
+    # Finds commonly misspelled English words.
+    - misspell
+
+    # Checks for duplicate words in the source code.
+    - dupword
+
+    # LLL Reports long lines.
+    - lll
+
+    # linter to detect errors invalid key values count
+    - loggercheck
+
+    # detect when a package or method could be replaced by one from the standard library
+    - exptostd
+
+    # detects nested contexts in loops or function literals
+    - fatcontext
+
+    # Reports uses of functions with replacement inside the testing package.
+    - usetesting
+
+    # Funcorder Follows function/method order described in https://github.com/uber-go/guide/blob/master/style.md#function-grouping-and-ordering
+    - funcorder
+
+    # GoCheckNoInits Avoid init() https://github.com/uber-go/guide/blob/master/style.md#avoid-init
+    - gochecknoinits
+
+    # Perfsprint Checks that fmt.Sprintf can be replaced with a faster alternative.
+    - perfsprint
+
+  settings:
+    embeddedstructfieldcheck:
+      forbid-mutex: true
+    errcheck:
+      # Report about not checking of errors in type assertions: `a := b.(MyStruct)`.
+      check-type-assertions: true
+    forbidigo:
+      forbid:
+        # Don't panic https://github.com/uber-go/guide/blob/master/style.md#dont-panic
+        - pattern: ^panic(ln)$
+          msg: Panics are a major source of cascading failures.
+    importas:
+      # Do not allow non-required aliases.
+      no-extra-aliases: true
+    lll:
+      line-length: 99
+    revive:
+      rules:
+        # Blank import should be only in a main or test package, or have a comment justifying it.
+        - name: blank-imports
+
+        # context.Context() should be the first parameter of a function when provided as argument.
+        - name: context-as-argument
+          arguments:
+            - allowTypesBefore: "*testing.T"
+
+        # Basic types should not be used as a key in `context.WithValue`
+        - name: context-keys-type
+
+        - name: defer
+
+        # This rule looks for program exits in functions other than main() or init()
+        # https://github.com/uber-go/guide/blob/master/style.md#exit-in-main
+        - name: deep-exit
+
+        # Importing with `.` makes the programs much harder to understand
+        - name: dot-imports
+
+        # Empty blocks make code less readable and could be a symptom of a bug or unfinished refactoring.
+        - name: empty-block
+
+        # Enforces consistent usage of make(map[type]type)
+        - name: enforce-map-style
+          arguments:
+            - "make"
+
+        - name: enforce-slice-style
+          arguments:
+            - "make"
+
+        # for better readability, variables of type `error` must be named with the prefix `err`.
+        - name: error-naming
+
+        # for better readability, the errors should be last in the list of returned values by a function.
+        - name: error-return
+
+        # for better readability, error messages should not be capitalized or end with punctuation or a newline.
+        - name: error-strings
+
+        # report when replacing `errors.New(fmt.Sprintf())` with `fmt.Errorf()` is possible
+        - name: errorf
+
+        # check naming and commenting conventions on exported symbols.
+        - name: exported
+          arguments:
+            # make error messages clearer
+            - "sayRepetitiveInsteadOfStutters"
+
+        # incrementing an integer variable by 1 is recommended to be done using the `++` operator
+        - name: increment-decrement
+
+        # highlights redundant else-blocks that can be eliminated from the code
+        - name: indent-error-flow
+
+        # This rule suggests a shorter way of writing ranges that do not use the second value.
+        - name: range
+
+        # receiver names in a method should reflect the struct name (p for Person, for example)
+        - name: receiver-naming
+
+        # redefining built in names (true, false, append, make) can lead to bugs very difficult to detect.
+        - name: redefines-builtin-id
+
+        # redundant else-blocks that can be eliminated from the code.
+        - name: superfluous-else
+
+        # prevent confusing name for variables when using `time` package
+        - name: time-naming
+
+        # warns when an exported function or method returns a value of an un-exported type.
+        - name: unexported-return
+
+        # spots and proposes to remove unreachable code. also helps to spot errors
+        - name: unreachable-code
+
+        # Functions or methods with unused parameters can be a symptom of an unfinished refactoring or a bug.
+        - name: unused-parameter
+
+        # report when a variable declaration can be simplified
+        - name: var-declaration
+
+        # warns when initialism, variable or package naming conventions are not followed.
+        - name: var-naming
+
+    misspell:
+      # Correct spellings using locale preferences for US or UK.
+      # Setting locale to US will correct the British spelling of 'colour' to 'color'.
+      # Default ("") is to use a neutral variety of English.
+      locale: US
+
+      # List of words to ignore
+      # among the one defined in https://github.com/golangci/misspell/blob/master/words.go
+      ignore-rules: []
+      #  - valor
+      #  - and
+
+      # Extra word corrections.
+      extra-words: []
+      #  - typo: "whattever"
+      #    correction: "whatever"
