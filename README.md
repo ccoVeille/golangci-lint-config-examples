@@ -4,6 +4,8 @@
 
 These are `.golangci.yml` examples to use in your projects
 
+![2025-01-10_21-27](https://github.com/user-attachments/assets/c34d5438-2128-4563-8d34-9895b7988ff3)
+
 ## Variants
 
 - [00-empty](./00-empty)
